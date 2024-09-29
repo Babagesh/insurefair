@@ -1,38 +1,221 @@
-.App {
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  font-size: 5em;
+  color: #c72222;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-top: 50px;
+  background: -webkit-linear-gradient(#009de1, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slogan {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  height: 90vh;
+  background: url("https://static.vecteezy.com/system/resources/previews/021/577/252/non_2x/gradient-color-texture-mesh-background-modern-minimalist-wallpaper-futuristic-background-free-vector.jpg")
+    center center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Boxes for Sections */
+.box {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.box p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+form label {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+
+form input,
+form select {
+  box-sizing: border-box;
+}
+
+/* Styles for input and select fields */
+form input,
+form select {
+  width: 100%;
+  height: 44px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: white;
+  appearance: none;
+}
+
+/* Focus styles */
+form input:focus,
+form select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #357ab8, #4a90e2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styling */
+footer {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/021/577/252/non_2x/gradient-color-texture-mesh-background-modern-minimalist-wallpaper-futuristic-background-free-vector.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+}
+
+footer img {
+  margin-right: 20px;
+  width: 150px;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* Results Table */
+.results-container {
+  max-width: 80%;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.results-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.results-table td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.rating {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rating.good {
+  background: linear-gradient(135deg, #00e676, #66ffa6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rating.medium {
+  background: linear-gradient(135deg, #ffeb3b, #fff176);
+}
+
+.rating.bad {
+  background: linear-gradient(135deg, #ff5252, #ff867c);
+}
+
+.edit-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Information Sections */
+.info-section-small {
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.info-section-small h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.info-section-small p {
+  font-size: 1.2em;
+  line-height: 1.6;
 }
